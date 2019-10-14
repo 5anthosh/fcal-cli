@@ -2,6 +2,7 @@
   "name": "fcal-cli",
   "version": "0.1.0",
   "description": "Cli for [fcal](https://github.com/5anthosh/fcal)",
+  "main": "lib/index.js",
   "bin": {
     "fcal": "bin/index.js"
   },
