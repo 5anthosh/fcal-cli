@@ -1,0 +1,44 @@
+{
+  "name": "fcal-cli",
+  "version": "0.1.0",
+  "description": "Cli for [fcal](https://github.com/5anthosh/fcal)",
+  "bin": {
+    "fcal": "bin/index.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "preversion": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5anthosh/fcal-cli.git"
+  },
+  "keywords": ["cli", "fcal", "interpreter"],
+  "author": "Santhosh Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/5anthosh/fcal-cli/issues"
+  },
+  "homepage": "https://github.com/5anthosh/fcal-cli#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "fcal": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.12",
+    "prettier": "^1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.4"
+  }
+}
