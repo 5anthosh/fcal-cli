@@ -1,6 +1,6 @@
 {
   "name": "fcal-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Cli for [fcal](https://github.com/5anthosh/fcal)",
   "main": "lib/index.js",
   "bin": {
@@ -24,7 +24,12 @@
     "type": "git",
     "url": "git+https://github.com/5anthosh/fcal-cli.git"
   },
-  "keywords": ["cli", "fcal", "interpreter"],
+  "keywords": [
+    "cli",
+    "fcal",
+    "interpreter",
+    "math"
+  ],
   "author": "Santhosh Kumar",
   "license": "MIT",
   "bugs": {
@@ -33,7 +38,7 @@
   "homepage": "https://github.com/5anthosh/fcal-cli#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "fcal": "^0.1.0"
+    "fcal": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",

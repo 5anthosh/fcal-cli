@@ -5,7 +5,7 @@ import readline = require("readline");
 import { Fcal, Type } from "fcal";
 
 function main() {
-  const fcal = new Fcal();
+  const fcalEng = new Fcal();
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -17,7 +17,7 @@ function main() {
       rl.close();
     }
     try {
-      const value = fcal.evaluate(line) as Type.Numberic;
+      const value = fcalEng.evaluate(line) as Type.Numberic;
       // tslint:disable-next-line:no-console
       console.log(value.print());
     } catch (error) {
