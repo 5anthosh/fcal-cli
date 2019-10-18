@@ -17,12 +17,33 @@ function main() {
       rl.close();
     }
     try {
-      const value = fcalEng.evaluate(line) as Type.Numberic;
-      // tslint:disable-next-line:no-console
-      console.log(value.print());
+      const value = fcalEng.evaluate(line);
+      if (value instanceof Type.Percentage) {
+        console.log(
+          `${colors.green(value.number.toString())} ${colors.bold(
+            colors.blue("%")
+          )}`
+        );
+      } else if (value instanceof Type.UnitNumber) {
+        if (value.number.lessThanOrEqualTo(1) && !value.number.isNegative()) {
+          console.log(
+            `${colors.green(value.number.toString())} ${colors.bold(
+              colors.blue(value.unit.singular)
+            )}`
+          );
+        } else {
+          console.log(
+            `${colors.green(value.number.toString())} ${colors.bold(
+              colors.blue(value.unit.plural)
+            )}`
+          );
+        }
+      } else {
+        console.log(colors.green(value.print()));
+      }
     } catch (error) {
       // tslint:disable-next-line:no-console
-      console.error(colors.red(`Error ${error.stack}`));
+      console.error(colors.red(`${error.message}`));
     }
     rl.prompt();
   }).on("close", () => {
