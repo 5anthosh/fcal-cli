@@ -20,20 +20,18 @@ function main() {
       const value = fcalEng.evaluate(line);
       if (value instanceof Type.Percentage) {
         console.log(
-          `${colors.green(value.number.toString())} ${colors.bold(
-            colors.blue("%")
-          )}`
+          `${colors.green(value.n.toString())} ${colors.bold(colors.blue("%"))}`
         );
       } else if (value instanceof Type.UnitNumber) {
-        if (value.number.lessThanOrEqualTo(1) && !value.number.isNegative()) {
+        if (value.n.lessThanOrEqualTo(1) && !value.n.isNegative()) {
           console.log(
-            `${colors.green(value.number.toString())} ${colors.bold(
+            `${colors.green(value.n.toString())} ${colors.bold(
               colors.blue(value.unit.singular)
             )}`
           );
         } else {
           console.log(
-            `${colors.green(value.number.toString())} ${colors.bold(
+            `${colors.green(value.n.toString())} ${colors.bold(
               colors.blue(value.unit.plural)
             )}`
           );

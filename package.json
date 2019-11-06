@@ -1,6 +1,6 @@
 {
   "name": "fcal-cli",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Cli for [fcal](https://github.com/5anthosh/fcal)",
   "main": "lib/index.js",
   "bin": {
@@ -38,13 +38,13 @@
   "homepage": "https://github.com/5anthosh/fcal-cli#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "fcal": "^0.2.1"
+    "fcal": "^0.3.0"
   },
   "devDependencies": {
-    "@types/node": "^12.7.12",
+    "@types/node": "^12.12.6",
     "prettier": "^1.18.2",
-    "tslint": "^5.20.0",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.7.2"
   }
 }
