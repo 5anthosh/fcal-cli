@@ -1,6 +1,6 @@
 {
   "name": "fcal-cli",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Cli for [fcal](https://github.com/5anthosh/fcal)",
   "main": "lib/index.js",
   "bin": {
@@ -12,6 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "start": "node ./bin/index.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -38,10 +39,10 @@
   "homepage": "https://github.com/5anthosh/fcal-cli#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "fcal": "^0.3.1"
+    "fcal": "^0.3.2"
   },
   "devDependencies": {
-    "@types/node": "^12.12.7",
+    "@types/node": "^12.12.14",
     "prettier": "^1.19.1",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
