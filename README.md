@@ -25,3 +25,20 @@ fcal > 4 + 6 cm
 ```sh
 fcal > .exit
 ```
+
+Get more info about expression
+
+```sh
+fcal> # 2342341234 + 234234
+
+Evaluation time: 0.647ms
+
+2342575468
+
+AST
++ (0)BINARY  < + +  (12, 13)> 
+|
++---- (1)LITERAL 2342341234
+|
++---- (1)LITERAL 234234
+```
